@@ -1,0 +1,8 @@
+{
+  "type": "record",
+  "name": "example",
+  "fields": [
+    {"name": "field_1", "type": "long", "default": 42},
+    {"name": "field_2", "type": "string"}
+  ]
+}
