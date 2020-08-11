@@ -31,7 +31,7 @@ fn main() -> Result<(), Error> {
     writer.append_ser(another_message)?;
     writer.flush()?;
 
-    let input: Vec<u8> = writer.into_inner();
+    let input: Vec<u8> = writer.into_inner().unwrap();
     let reader: Reader<&[u8]> = Reader::with_schema(&schema, &input[..])?;
 
     for record in reader {
